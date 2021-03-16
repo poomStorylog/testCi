@@ -22,9 +22,6 @@ jobs:
           paths:
             - ~/.gradle
       - run:
-          name: Android Lint
-          command: ./gradlew lint
-      - run:
           name: Kotlint Lint
           command: ./gradlew ktlint    
 
