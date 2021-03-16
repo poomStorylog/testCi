@@ -22,16 +22,10 @@ jobs:
           paths:
             - ~/.gradle
       - run:
-          name: Build Application
-          command: ./gradlew clean assembleDebug
-      - store_artifacts:
-          name: Upload Artifacts Reports
-          path: app/build/reports
-          destination: reports
-      - store_artifacts:
-          name: Upload Artifacts Reports
-          path: app/build/test-results
-      - store_artifacts:
-          name: Upload Artifacts File APK
-          path: app/build/outputs/apk
-          destination: apk      
+          name: Android Lint
+          command: ./gradlew lint
+      - run:
+          name: Kotlint Lint
+          command: ./gradlew ktlint    
+
+        
